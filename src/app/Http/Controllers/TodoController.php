@@ -14,10 +14,10 @@ class TodoController extends Controller
     $todos = Todo::all();
     return view('index', compact('todos'));
     }
-    public function store(Request $request) 
+    public function store(TodoRequest $request)
     {
     $todo = $request->only(['content']);
     todo::create($todo);
-    return redirect('/');
+    return redirect('/')->with('message', 'Todoを作成しました');
 }
 }
