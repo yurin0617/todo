@@ -12,7 +12,7 @@ class TodoController extends Controller
 {
     public function index()
     {
-        $todos = Todo::with('category')->get();
+        $todos = Todo::with('category')->simplePaginate(10);
         $categories = Category::all();
         return view('index', compact('todos', 'categories'));
     }

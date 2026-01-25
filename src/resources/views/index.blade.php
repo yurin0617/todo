@@ -96,6 +96,9 @@
             </tr>
             @endforeach
         </table>
+        <div class="pagination">
+            {{ $todos->appends(request()->query())->links() }}
+        </div>
     </div>
 </div>
 @endsection
