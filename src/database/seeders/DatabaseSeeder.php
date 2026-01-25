@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategoriesTableSeeder::class,
         ]);
+        \App\Models\Todo::factory(30)->create();
     }
 }
