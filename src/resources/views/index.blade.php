@@ -97,7 +97,8 @@
             @endforeach
         </table>
         <div class="pagination">
-            {{ $todos->appends(request()->query())->links() }}
+            {{ $todos->appends(request()->query())->links('pagination::bootstrap-4')
+ }}
         </div>
     </div>
 </div>
